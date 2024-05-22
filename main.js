@@ -66,6 +66,18 @@ function changeScore() {
     score.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 }
 
+function displayWinner() {
+    const winner = (humanScore >= 5) ? "Human" : "Computer";
+    const winnerElement = document.createElement("div");
+    winnerElement.textContent = `${winner} wins with a score of 
+    Human: ${humanScore} Computer: ${computerScore}`;
+    const score = document.querySelector(".score");
+    score.appendChild(winnerElement);
+    
+    humanScore = 0;
+    computerScore = 0;
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -77,4 +89,7 @@ selection.addEventListener("click", (event) => {
     let computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
     changeScore();
+    if (humanScore >= 5 || computerScore >= 5) {
+        displayWinner();
+    }
 })
