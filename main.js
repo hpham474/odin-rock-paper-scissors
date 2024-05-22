@@ -16,23 +16,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let choice = "error";
-    do {
-        choice = prompt("Rock, paper, or scissors?");
-    } while (!humanChoiceValidation(choice.toLowerCase()));
-
-    return choice.toLowerCase();
-}
-
-function humanChoiceValidation(text) {
-    if (text != "rock" && text != "paper" && text != "scissors") {
-        console.log("Invalid input");
-        return false;
-    }
-    return true;
-}
-
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "rock") {
         if(computerChoice === "rock") {
@@ -98,5 +81,3 @@ selection.addEventListener("click", (event) => {
     let computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
 })
-
-//playGame();
