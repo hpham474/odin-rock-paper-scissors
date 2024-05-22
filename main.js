@@ -19,14 +19,11 @@ function getComputerChoice() {
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "rock") {
         if(computerChoice === "rock") {
-            console.log("Tie! Rock equals Rock.");
         }
         else if(computerChoice === "paper") {
-            console.log("You lose! Paper beats Rock");
             computerScore++;
         } 
         else if(computerChoice === "scissors") {
-            console.log("You win! Rock beats Scissors");
             humanScore++;
         }
         else {
@@ -35,14 +32,11 @@ function playRound(humanChoice, computerChoice) {
     }
     else if(humanChoice === "paper") {
         if(computerChoice === "rock") {
-            console.log("You win! Paper beats Rock");
             humanScore++;
         }
         else if(computerChoice === "paper") {
-            console.log("Tie! Paper equals Paper");
         } 
         else if(computerChoice === "scissors") {
-            console.log("You lose! Scissors beats Paper");
             computerScore++;
         }
         else {
@@ -51,15 +45,12 @@ function playRound(humanChoice, computerChoice) {
     }
     else if(humanChoice === "scissors") {
         if(computerChoice === "rock") {
-            console.log("You lose! Rock beats Scissors");
             computerScore++;
         }
         else if(computerChoice === "paper") {
-            console.log("You win! Scissors beats Paper");
             humanScore++;
         } 
         else if(computerChoice === "scissors") {
-            console.log("Tie! Scissors equals Scissors");
         }
         else {
             console.log("Weird choices have been made")
