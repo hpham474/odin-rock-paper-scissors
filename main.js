@@ -59,13 +59,11 @@ function playRound(humanChoice, computerChoice) {
     else {
         console.log("Weird choices have been made")
     }
-
-    const score = document.querySelector(".score");
-    score.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 }
 
 function changeScore() {
-
+    const score = document.querySelector(".score");
+    score.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
 }
 
 let humanScore = 0;
@@ -78,4 +76,5 @@ selection.addEventListener("click", (event) => {
     let humanChoice = target.textContent.toLowerCase();
     let computerChoice = getComputerChoice();
     playRound(humanChoice, computerChoice);
+    changeScore();
 })
