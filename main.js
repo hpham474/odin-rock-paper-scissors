@@ -68,6 +68,13 @@ function playRound(humanChoice, computerChoice) {
     else {
         console.log("Weird choices have been made")
     }
+
+    const score = document.querySelector(".score");
+    score.textContent = `Human: ${humanScore} Computer: ${computerScore}`;
+}
+
+function changeScore() {
+
 }
 
 let humanScore = 0;
